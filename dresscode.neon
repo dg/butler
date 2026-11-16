@@ -5,10 +5,12 @@ use:
 typeAnalysis: phpstan
 
 paths:
+	- src
 	- tests
 
 excludePaths:
 	- tests/**/output
+	- tests/tmp
 
 fileExtensions:
 	- php

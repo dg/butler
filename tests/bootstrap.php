@@ -7,3 +7,13 @@ if (@!include __DIR__ . '/../vendor/autoload.php') { // @ dependencies may not b
 
 Tester\Environment::setup();
 Tester\Environment::setupFunctions();
+
+
+/** Creates an empty directory private to the running test. */
+function createTempDir(): string
+{
+	@mkdir(__DIR__ . '/tmp'); // @ directory may already exist
+	$dir = __DIR__ . '/tmp/' . getmypid();
+	Tester\Helpers::purge($dir);
+	return $dir;
+}

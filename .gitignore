@@ -2,3 +2,4 @@
 /composer.lock
 /temp
 tests/**/output
+/tests/tmp
