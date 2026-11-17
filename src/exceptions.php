@@ -25,3 +25,11 @@ class QueueFullException extends \RuntimeException
 class IOException extends \RuntimeException
 {
 }
+
+
+/**
+ * The Endpoint refuses the request; the code is the HTTP status.
+ */
+class RequestException extends \RuntimeException
+{
+}
