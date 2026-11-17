@@ -4,6 +4,14 @@ namespace Butler;
 
 
 /**
+ * The task runs only in production, see #[Butler\AllowedLocally].
+ */
+class ProductionOnlyException extends \LogicException
+{
+}
+
+
+/**
  * The queue of a PayloadTask refuses another payload.
  */
 class QueueFullException extends \RuntimeException
